@@ -21,9 +21,9 @@ services:
     links:
       - mongo
     environment:
-      - ENDPOINT: 'MONGODB'
-      - TYPE: 'JSON'
-      - PORT: '27017'
-      - HOST: 'localhost'
-      - DB: 'demo'
-      - COLLECTION: 'test'
+      ENDPOINT: MONGODB
+      TYPE: JSON
+      PORT: 27017
+      HOST: localhost
+      DB: demo
+      COLLECTION: test
