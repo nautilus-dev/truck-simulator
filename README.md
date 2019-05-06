@@ -10,6 +10,17 @@ mvn clean package exec:java "-Dexec.args=-s MONGODB -f JSON -p <port> -host <ip>
 
 ## Docker Container building
 
-Execute using the docker-compose.yml in the docker subdirectory using:
+1) Execute mongodb using the docker-compose.yml in the docker subdirectory using:
 cd docker
 sudo docker-compose up -d
+
+2) execute the simulator:
+docker build \
+--build-arg ENDPOINT: MONGODB \
+--build-arg TYPE: JSON \
+--build-arg PORT: 27017 \
+--build-arg HOST: localhost \
+--build-arg DB: demo \
+--build-arg COLLECTION: test \
+.
+

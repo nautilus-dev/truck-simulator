@@ -14,18 +14,3 @@ services:
     restart: always
     ports:
        - 8081:8081
-
-  trucksimulator:
-    build: trivadispf/trucksimulator
-      context: .
-      args:
-        ENDPOINT: MONGODB
-        TYPE: JSON
-        PORT: 27017
-        HOST: localhost
-        DB: demo
-        COLLECTION: test
-    restart: always
-    links:
-      - mongo
-
