@@ -1,0 +1,29 @@
+# docker-compose script for MongoDB, MongoExpress and the druck driver simulator
+version: '0.1'
+
+services:
+  mongo:
+     image: mongo
+     restart: always
+     ports:
+       - 27017:27017
+
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+       - 8081:8081
+
+  trucksimulator:
+    image: TrivadisPF/truck-simulator:latest
+    restart: always
+    links:
+      - mongo
+    environment:
+      - ENDPOINT=MONGODB
+      - TYPE=JSON
+      - PORT=27017
+      - HOST=localhost
+      - DB=demo
+      - COLLECTION=test
