@@ -13,4 +13,13 @@ ARG HOST
 ARG DB
 ARG COLLECTION
 
+RUN echo "Endpoint: $ENDPOINT"
+RUN echo "Type: $TYPE"
+RUN echo "Port: $PORT"
+RUN echo "Host: $HOST"
+RUN echo "DB: $DB"
+RUN echo "Collection: $COLLECTION"
+
+
+
 RUN mvn clean package exec:java "-Dexec.args=-s $ENDPOINT -f $TYPE -p $PORT -host $HOST -db $DB -c $COLLECTION"

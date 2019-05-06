@@ -10,5 +10,6 @@ mvn clean package exec:java "-Dexec.args=-s MONGODB -f JSON -p <port> -host <ip>
 
 ## Docker Container building
 
-Execute using the docker-compose.yml in the docker-compose subdir using:
+Execute using the docker-compose.yml in the docker subdirectory using:
+cd docker
 sudo docker-compose up -d
