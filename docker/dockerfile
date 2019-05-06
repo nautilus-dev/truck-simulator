@@ -13,4 +13,4 @@ ARG HOST
 ARG DB
 ARG COLLECTION
 
-RUN mvn clean package exec:java "-Dexec.args=-s $ENDPOINT -f %TYPE -p $PORT -host $HOST -db $DB -c $COLLECTION"
+RUN mvn clean package exec:java "-Dexec.args=-s $ENDPOINT -f $TYPE -p $PORT -host $HOST -db $DB -c $COLLECTION"
