@@ -6,12 +6,12 @@ FROM maven:3.5-jdk-8-alpine as build
 WORKDIR /app
 COPY --from=clone /app/truck-simulator /app
 
-ARG ENDPOINT:MONGODB
-ARG TYPE:JSON
-ARG PORT:27017
-ARG HOST:localhost
-ARG DB:demo
-ARG COLLECTION:test
+ARG ENDPOINT=MONGODB
+ARG TYPE=JSON
+ARG PORT=27017
+ARG HOST=localhost
+ARG DB=demo
+ARG COLLECTION=test
 
 RUN echo "Endpoint: $ENDPOINT"
 RUN echo "Type: $TYPE"
