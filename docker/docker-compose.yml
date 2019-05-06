@@ -17,13 +17,14 @@ services:
 
   trucksimulator:
     build: .
+      args:
+        ENDPOINT: MONGODB
+        TYPE: JSON
+        PORT: 27017
+        HOST: localhost
+        DB: demo
+        COLLECTION: test
     restart: always
     links:
       - mongo
-    environment:
-      ENDPOINT: MONGODB
-      TYPE: JSON
-      PORT: 27017
-      HOST: localhost
-      DB: demo
-      COLLECTION: test
+
