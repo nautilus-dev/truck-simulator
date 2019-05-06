@@ -16,7 +16,7 @@ services:
        - 8081:8081
 
   trucksimulator:
-    build:
+    build: trivadispf/trucksimulator
       context: .
       args:
         ENDPOINT: MONGODB
