@@ -16,7 +16,7 @@ services:
        - 8081:8081
 
   trucksimulator:
-    image: TrivadisPF/truck-simulator:latest
+    image: trivadispf/truck-simulator:latest
     restart: always
     links:
       - mongo
