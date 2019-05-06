@@ -16,7 +16,8 @@ services:
        - 8081:8081
 
   trucksimulator:
-    build: .
+    build:
+      context: .
       args:
         ENDPOINT: MONGODB
         TYPE: JSON
