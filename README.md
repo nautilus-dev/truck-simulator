@@ -8,6 +8,9 @@ This extension features also producing MongoDB messages
 
 mvn clean package exec:java "-Dexec.args=-s MONGODB -f JSON -p <port> -host <ip> -db <demo> -c <collection>"
 
+e.g.
+mvn clean package exec:java "-Dexec:args=-s MONGODB -f JSON -p 27017 -host 127.0.0.1 -db demo -c test"
+
 ## Docker Container building
 
 Execute mongodb using the docker-compose.yml in the docker subdirectory using:

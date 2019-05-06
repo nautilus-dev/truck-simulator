@@ -9,7 +9,7 @@ COPY --from=clone /app/truck-simulator /app
 ARG ENDPOINT=MONGODB
 ARG TYPE=JSON
 ARG PORT=27017
-ARG HOST=localhost
+ARG HOST=mongo
 ARG DB=demo
 ARG COLLECTION=test
 
